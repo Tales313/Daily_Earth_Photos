@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1#day {
+    text-align: center;
+    margin: 15px 0 25px;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 50px;
+}
+
+div.bloco {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.bloco a img {
+    width: 350px;
+    transition: 0.3s;
+}
+
+div.bloco img:hover {
+    transform: scale(1.2);
+}
+
+div.bloco span {
+    z-index: 100;
+}
