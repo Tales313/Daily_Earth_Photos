@@ -8,11 +8,12 @@ body {
     background-color: #000;
     color: #fff;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-bottom: 15px;
 }
 
 h1#day {
     text-align: center;
-    margin: 15px 0 25px;
+    padding: 15px 0 25px;
 }
 
 section {
