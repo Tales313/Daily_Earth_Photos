@@ -30,10 +30,13 @@ div.bloco {
 
 div.bloco a img {
     width: 350px;
+    border: 2px solid #000;
+    border-radius: 5%;
     transition: 0.3s;
 }
 
 div.bloco img:hover {
+    border-color: #4286f4;
     transform: scale(1.2);
 }
 
