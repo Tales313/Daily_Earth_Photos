@@ -57,9 +57,7 @@ function addBlocos(qtd) {
 function getProxBloco() {
     return `
     <div class="bloco">
-        <a href="${imgLink}${d.year}/${d.month}/${d.day}/png/${array[i].image}.png" target="blank" rel="noopener">
-            <img src="${imgLink}${d.year}/${d.month}/${d.day}/png/${array[i].image}.png">
-        </a>
+        <img src="${imgLink}${d.year}/${d.month}/${d.day}/png/${array[i].image}.png">
         <span>${d.hour[i]}</span>
     </div>`
 }
