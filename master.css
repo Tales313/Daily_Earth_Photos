@@ -21,6 +21,13 @@ header {
     transition: .2s ease-in;
 }
 
+@media all and (min-width: 768px) {
+    header {
+        left: 0%;
+        padding: 5px 0px;
+    }
+}
+
 header .fas {
     color: #fff;
     position: fixed;
@@ -31,14 +38,51 @@ header .fas {
     transition: .4s;
 }
 
+@media all and (min-width: 768px) {
+    header .fas {
+        display: none;
+    }
+}
+
 header nav {
     border-top: 3px solid #656c77;
     margin-top: 50px;
 }
 
+@media all and (min-width: 768px) {
+    header nav {
+        margin-top: 0px;
+        border-width: 0px;
+    }
+}
+
+@media all and (min-width: 1024px) {
+    header nav {
+        margin-left: 10px;
+    }
+}
+
+@media all and (min-width: 768px) {
+    header nav ul {
+        display: flex;
+    }
+}
+
 header nav ul li {
     list-style: none;
     border-bottom: 3px solid #656c77;
+    border-top: 3px solid #fff;
+}
+
+@media all and (min-width: 768px) {
+    header nav ul li {
+        margin-right: 10px;
+        border-color: #fff;
+        transition: .2s all ease;
+    }
+    header nav ul li:hover {
+        border-bottom-color: #656c77;
+    }
 }
 
 header nav ul li a {
@@ -71,6 +115,7 @@ h1#day {
 @media all and (min-width: 768px) {
     h1#day {
         font-size: 2.5em;
+        padding-top: 90px;
     }
 }
 
