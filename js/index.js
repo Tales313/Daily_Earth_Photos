@@ -1,8 +1,5 @@
 let h1Day = document.querySelector('h1#day')
 let section = document.querySelector('section')
-let burguer = document.querySelector('.fa-bars')
-let header = document.querySelector('header')
-let isMenuOpen = false
 
 /*******************************************************************************/
 
@@ -12,26 +9,10 @@ let d //objeto que vai guardar algumas informações sobre data e hora de cada f
 let apiKey = '7BkyIyS2p0ChLQBSiTGSlbz7b1n4EzDBzFoQH8Xb'
 let imgLink = 'https://epic.gsfc.nasa.gov/archive/natural/'
 let yesterdayEarth = `https://api.nasa.gov/EPIC/api/natural?api_key=${apiKey}`
-let apod = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`
-// apod =  Astronomy Picture of the Day
 
 /*******************************************************************************/
 
 async function preparePage() {
-
-    burguer.addEventListener('click', function() {
-        if(isMenuOpen) {
-            burguer.style.transform = "rotate(0deg)"
-            header.style.left = "-100%"
-            burguer.style.color = "#fff"
-            isMenuOpen = false
-        }else {
-            burguer.style.transform = "rotate(-180deg)"
-            header.style.left = "0%"
-            burguer.style.color = "#000"
-            isMenuOpen = true
-        }
-    })
 
     let response = await fetch(yesterdayEarth)
     array = await response.json()

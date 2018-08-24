@@ -6,90 +6,11 @@
 
 body {
     /* background-color: #000; */
-    background-image: url('./imgs/starry_background.png');
+    background-image: url('../imgs/starry_background.png');
     background-size: contain;
     color: #fff;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding-bottom: 15px;
-}
-
-header {
-    position: fixed;
-    width: 100%;
-    background-color: #fff;
-    left: -100%;
-    transition: .2s ease-in;
-}
-
-@media all and (min-width: 768px) {
-    header {
-        left: 0%;
-        padding: 5px 0px;
-    }
-}
-
-header .fas {
-    color: #fff;
-    position: fixed;
-    font-size: 30px;
-    left: 10px;
-    top: 10px;
-    z-index: 500;
-    transition: .4s;
-}
-
-@media all and (min-width: 768px) {
-    header .fas {
-        display: none;
-    }
-}
-
-header nav {
-    border-top: 3px solid #656c77;
-    margin-top: 50px;
-}
-
-@media all and (min-width: 768px) {
-    header nav {
-        margin-top: 0px;
-        border-width: 0px;
-    }
-}
-
-@media all and (min-width: 1024px) {
-    header nav {
-        margin-left: 10px;
-    }
-}
-
-@media all and (min-width: 768px) {
-    header nav ul {
-        display: flex;
-    }
-}
-
-header nav ul li {
-    list-style: none;
-    border-bottom: 3px solid #656c77;
-    border-top: 3px solid #fff;
-}
-
-@media all and (min-width: 768px) {
-    header nav ul li {
-        margin-right: 10px;
-        border-color: #fff;
-        transition: .2s all ease;
-    }
-    header nav ul li:hover {
-        border-bottom-color: #656c77;
-    }
-}
-
-header nav ul li a {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: #4286f4;
 }
 
 h1#day {
