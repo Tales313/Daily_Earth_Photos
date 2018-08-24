@@ -13,9 +13,44 @@ body {
     padding-bottom: 15px;
 }
 
+header {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    left: -100%;
+    transition: .2s ease-in;
+}
+
+header .fas {
+    color: #fff;
+    position: fixed;
+    font-size: 30px;
+    left: 10px;
+    top: 10px;
+    z-index: 500;
+    transition: .4s;
+}
+
+header nav {
+    border-top: 3px solid #656c77;
+    margin-top: 50px;
+}
+
+header nav ul li {
+    list-style: none;
+    border-bottom: 3px solid #656c77;
+}
+
+header nav ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #4286f4;
+}
+
 h1#day {
     text-align: center;
-    padding-top: 25px;
+    padding-top: 50px;
     padding-bottom: 40px;
     font-size: 1.6em;
 }
