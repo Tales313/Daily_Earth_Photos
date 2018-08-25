@@ -1,4 +1,7 @@
 let intro_text = document.querySelector('p#intro')
+let previousDayBtt = document.querySelector('form .fa-angle-left')
+let dateInput = document.querySelector('input#date-input')
+let nextDayBtt = document.querySelector('form .fa-angle-right')
 let button = document.querySelector('input#date-submit')
 let error_msg = document.querySelector('p#error-msg')
 let apod_title = document.querySelector('h2#apod-title')
@@ -13,20 +16,44 @@ let apiKey = '7BkyIyS2p0ChLQBSiTGSlbz7b1n4EzDBzFoQH8Xb'
 let apodLink = 'https://api.nasa.gov/planetary/apod'
 let todayApod = `${apodLink}?api_key=${apiKey}`
 
+/*******************************************************************************/
+
 async function main() {
 
     await loadAPOD(todayApod) //loading the today's apod
 
+    dateInput.value = json.date
+
     intro_text.textContent = `Today is ${json.date}, but you can choose a different date
         right below!`
 
+    previousDayBtt.addEventListener('click', function() {
+        let dateObj = new Date(dateInput.value)
+        dateObj.setDate(dateObj.getDate() - 1)
+        setFormDateValue(dateObj)
+    })
+
+    nextDayBtt.addEventListener('click', function() {
+        let dateObj = new Date(dateInput.value)
+        dateObj.setDate(dateObj.getDate() + 1)
+        setFormDateValue(dateObj)
+    })
+
     button.addEventListener('click', async function(e) {
         e.preventDefault()
-        let queryDate = document.querySelector('input#date-input').value
+        let queryDate = dateInput.value
         let link = `${apodLink}?date=${queryDate}&api_key=${apiKey}`
         loadAPOD(link)
     })
 
+}
+
+function setFormDateValue(dateObj) {
+    let str = dateObj.toJSON()
+    let year = str.substr(0, 4)
+    let month = str.substr(5, 2)
+    let day = str.substr(8, 2)
+    dateInput.value = year+'-'+month+'-'+day
 }
 
 async function loadAPOD(link) {

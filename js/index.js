@@ -18,7 +18,7 @@ async function preparePage() {
     array = await response.json()
 
     d = getDateInfos(array)
-    h1Day.insertAdjacentText('beforeend', "Fotos do dia "+d.day+"/"+d.month+"/"+d.year)
+    h1Day.insertAdjacentText('beforeend', "Photos of "+d.day+"/"+d.month+"/"+d.year)
     addBlocos(9)
 }
 
